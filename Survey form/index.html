@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    body {
+      padding: 50px;
+    }
+  
+    body {
+      padding: 50px;
+    }
+    .star-rating input {
+      display: none;
+    }
+    .star-rating label {
+      font-size: 24px;
+      color: hsl(59, 87%, 85%);
+      cursor: pointer;
+    }
+    .star-rating input:checked ~ label {
+      color: #faeb22;
+    }
+  </style>
+  
+  <title>Survey Form </title>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="text-center">Survey Form</h1>
+    <form>
+     <!-- First Name -->
+     <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="firstName">First Name:</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" required>
+        </div>
+
+        <!-- Last Name -->
+        <div class="form-group col-md-6">
+          <label for="lastName">Last Name:</label>
+          <input type="text" class="form-control" id="lastName" name="lastName" required>
+        </div>
+      </div>
+      <!-- radio button -->
+
+  <div class="form-group">
+    <label>2. Which is your favourite subject?</label>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" id="q2_very_likely" name="q2" value="very-likely" required>
+      <label class="form-check-label" for="q2_very_likely">English</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" id="q2_likely" name="q2" value="likely" required>
+      <label class="form-check-label" for="q2_likely">Tamil</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" id="q2_neutral" name="q2" value="neutral" required>
+      <label class="form-check-label" for="q2_neutral">Science</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" id="q2_unlikely" name="q2" value="unlikely" required>
+      <label class="form-check-label" for="q2_unlikely">Mathematics</label>
+    </div>
+    <div class="form-check">
+      <input type="radio" class="form-check-input" id="q2_very_unlikely" name="q2" value="very-unlikely" required>
+      <label class="form-check-label" for="q2_very_unlikely">Social Science</label>
+    </div>
+  </div>
+
+      <!-- Question 3 -->
+      <div class="form-group">
+        <label for="q3">3. Your highest qualification:</label>
+        <select class="form-control" id="q3" name="q3" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="very-satisfied">SSLC</option>
+          <option value="satisfied">HSC</option>
+          <option value="neutral">B.Sc/BA/BBA/BCOM</option>
+          <option value="unsatisfied">M.Sc/MBA/MCA</option>
+          <option value="very-unsatisfied">PhD</option>
+        </select>
+      </div>
+<!-- Star Rating -->
+      <div class="form-group">
+        <label>4. Your star rating for us :</label>
+        <div class="star-rating">
+          <input type="radio" id="star5" name="rating" value="5">
+          <label for="star5">&#9733;</label>
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4">&#9733;</label>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3">&#9733;</label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2">&#9733;</label>
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1">&#9733;</label>
+        </div>
+      </div>
+      <p>Your rating for us: </p>
+
+       <!-- Email -->
+       <div class="form-group">
+        <label for="email">4. Email address:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+
+       <!-- Company or College Name -->
+       <div class="form-group">
+        <label for="organization">5. Name of the College:</label>
+        <input type="text" class="form-control" id="organization" name="organization" required>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="form-group">
+        <label for="q3">6. Write your feedback here:</label>
+        <textarea class="form-control" id="q3" name="q3" rows="3"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
